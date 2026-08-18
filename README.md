@@ -62,6 +62,11 @@ cadence, and metrics.
 - Stage 15 runs π0.5 on five IK-reachable Panda targets (200 requests): the
   system path is stable but reaches 0/5 successes, an explicit negative result
   that prevents an unsupported transfer claim.
+- Stage 17 turns that negative result into a pre-registered embodiment-mismatch
+  diagnosis: 72/72 live requests completed with no safe holds. The identity
+  action interpretation had positive one-step geometric progress on 2/3 of
+  diagnostic cases and 5/8 of held-out cases, but only at millimetre scale;
+  this does not contradict the Stage 15 0/5 long-horizon result.
 - Stage 16 packages the architecture, evidence table, interview narrative and
   strict presentation boundaries for this project portfolio entry.
 - Headless MuJoCo/EGL and ALOHA smoke testing now pass. ALOHA is deliberately
@@ -117,5 +122,6 @@ python -m unittest discover -s tests -v
 - [Stage 14: controlled Panda reach task](docs/STAGE_14_PANDA_REACH_TASK.md)
 - [Stage 15: live π0.5 Panda reach suite](docs/STAGE_15_REACH_SUITE.md)
 - [Stage 16: interview package](docs/STAGE_16_INTERVIEW_PACKAGE.md)
+- [Stage 17: embodiment-mismatch diagnosis](docs/STAGE_17_EMBODIMENT_MISMATCH.md)
 - [Results at a glance](docs/RESULTS_AT_A_GLANCE.md)
 - [Forward plan](docs/ROADMAP.md)

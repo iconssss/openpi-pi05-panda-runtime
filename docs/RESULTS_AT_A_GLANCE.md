@@ -8,7 +8,9 @@
 | 12 | Long stress run | 200/200 synthetic-input cycles; RTT mean/p95 82.61/88.15 ms; 0 safe holds. |
 | 14 | Independent task validation | Zero/random fail; DLS IK oracle succeeds at 3.23 cm <= 4 cm. |
 | 15 | π0.5 task-path suite | 200 requests, 0 safety failures, 0/5 reach successes. |
+| 17 | Pre-registered embodiment-mismatch diagnosis | 72/72 requests, 0 safe holds; identity mapping gives small one-step progress but no long-horizon success claim. |
 
 The Stage 15 result is intentional evidence of a transfer limitation, not a
-system failure. See [Stage 16](STAGE_16_INTERVIEW_PACKAGE.md) for the narrative
-and presentation boundaries.
+system failure. Stage 17 narrows the failure mechanism without changing that
+conclusion. See [Stage 16](STAGE_16_INTERVIEW_PACKAGE.md) for the narrative and
+presentation boundaries.

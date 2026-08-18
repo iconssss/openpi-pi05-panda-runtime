@@ -18,9 +18,18 @@ bridge; live one-step and re-observation loops; and a 200-request stress run.
    targets / 200 policy requests completed with zero safety failures but 0/5
    task successes. The negative result correctly distinguishes reliable
    infrastructure from unsupported cross-embodiment skill claims.
-4. **Stage 16 - interview package.** Produce architecture diagram, failure-mode
-   table, experiment summary, cost/resource notes, and an honest limitations/
-   real-robot readiness checklist.
+4. **Stage 16 - interview package (complete).** Architecture diagram,
+   failure-mode table, experiment summary, cost/resource notes, and an honest
+   limitations/real-robot readiness checklist are recorded.
+5. **Stage 17 - embodiment-mismatch diagnosis (complete).** A pre-registered
+   12-target / 6-visual-condition / 3-action-interpretation one-step study
+   completed 72 live requests with zero safe holds. Identity is directionally
+   preferable to the two diagnostic alternatives, but its millimetre-scale
+   progress is insufficient for a transfer claim.
+6. **Stage 18 - frozen-policy action-adapter study (next).** Create an IK
+   expert-labelled Panda dataset using diagnostic targets only, train a bounded
+   residual adapter, and report final results exclusively on the Stage 17
+   held-out targets and visual conditions.
 
 ## GPU policy
 
