@@ -9,6 +9,8 @@
 | 14 | Independent task validation | Zero/random fail; DLS IK oracle succeeds at 3.23 cm <= 4 cm. |
 | 15 | π0.5 task-path suite | 200 requests, 0 safety failures, 0/5 reach successes. |
 | 17 | Pre-registered embodiment-mismatch diagnosis | 72/72 requests, 0 safe holds; identity mapping gives small one-step progress but no long-horizon success claim. |
+| 18 | Frozen residual-adapter held-out evaluation | All arms 0/24 success at 4 cm; adapters reduce mean final distance from 0.17973 m (raw) to 0.10159--0.10519 m, without seed selection. |
+| 19 | Read-only multi-step failure analysis | Curves show adapter/DLS initial improvement followed by late-horizon stall/drift; zero clips/safe holds, while residual/state-shift attribution is not identifiable from Stage 18 logs. |
 
 The Stage 15 result is intentional evidence of a transfer limitation, not a
 system failure. Stage 17 narrows the failure mechanism without changing that

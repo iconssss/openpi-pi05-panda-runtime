@@ -74,6 +74,11 @@ cadence, and metrics.
   Adapters reduced mean final distance from 0.17973 m (raw) to
   0.10350/0.10159/0.10519 m (seeds 11/22/33); this is not a Panda skill or
   native-transfer claim, and no seed was selected from held-out results.
+- Stage 19 is a no-GPU, read-only analysis of every Stage 18 trajectory. It
+  finds late-horizon distance regression after initial adapter/DLS progress,
+  with zero safe holds and bridge clips. The logged data cannot separately
+  identify residual-vector error, joint-limit proximity, or state-distribution
+  shift; those are Stage 20 hypotheses, not conclusions.
 - Stage 16 packages the architecture, evidence table, interview narrative and
   strict presentation boundaries for this project portfolio entry.
 - Headless MuJoCo/EGL and ALOHA smoke testing now pass. ALOHA is deliberately
@@ -131,5 +136,6 @@ python -m unittest discover -s tests -v
 - [Stage 16: interview package](docs/STAGE_16_INTERVIEW_PACKAGE.md)
 - [Stage 17: embodiment-mismatch diagnosis](docs/STAGE_17_EMBODIMENT_MISMATCH.md)
 - [Stage 18: frozen-policy action-adapter study](docs/STAGE_18_FROZEN_POLICY_ACTION_ADAPTER.md)
+- [Stage 19: multi-step failure analysis](docs/STAGE_19_MULTISTEP_FAILURE_ANALYSIS.md)
 - [Results at a glance](docs/RESULTS_AT_A_GLANCE.md)
 - [Forward plan](docs/ROADMAP.md)

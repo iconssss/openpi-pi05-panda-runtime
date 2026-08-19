@@ -35,6 +35,14 @@ bridge; live one-step and re-observation loops; and a 200-request stress run.
    from 0.17973 m (raw) to 0.10350 / 0.10159 / 0.10519 m (seeds 11/22/33), but
    do not support a Panda task-success or native-transfer claim. The analytic
    DLS reference was also 0/24 at this 40-step horizon and is not learned.
+7. **Stage 19 - multi-step failure attribution and robustness analysis
+   (complete).** Read-only analysis of every Stage 18 held-out trajectory
+   identifies raw late-horizon divergence (+24.21 mm over the final ten steps)
+   and adapter/DLS late-horizon regression (+2.62 to +7.10 mm), with zero
+   safe holds and bridge clips. It intentionally does not claim residual,
+   joint-limit, or state-distribution causality because those per-step signals
+   were not logged. Any Stage 20 training proposal requires a new pre-registered
+   training distribution and independent test set.
 
 ## GPU policy
 

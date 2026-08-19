@@ -183,3 +183,18 @@
   `/root/shared-nvme/openpi-robot-runtime/results/stage18_held_out_evaluation/report.json`.
   The run-specific policy server was SIGTERM-stopped; GPU was 0% / 1 MiB and
   shared disk had 21 GB free.
+## 2026-08-19 — Stage 19 read-only multi-step failure attribution
+
+- Stage 19 consumed only the frozen Stage 18 held-out JSON, with no GPU,
+  policy server, policy request, training, tuning, or seed selection. The
+  committed analyzer produces an ignored JSON/SVG artifact locally; raw data
+  remains authoritative on remote shared storage.
+- Raw identity mean distance worsened from 0.13601 m to 0.17973 m and added
+  24.21 mm over the final ten steps. Seeds 11/22/33 and DLS improved net
+  distance but then regressed +5.91/+2.62/+5.68/+7.10 mm over the final ten
+  steps. All variants had zero safe holds and bridge clips.
+- Visual and target grouping is descriptive only. Per-step residual vectors,
+  Panda state-distribution shift, and joint-limit proximity were not logged;
+  Stage 19 explicitly treats them as unidentifiable rather than causal claims.
+  Stage 20 must pre-register a separate training distribution and independent
+  test set before any new model is trained.
