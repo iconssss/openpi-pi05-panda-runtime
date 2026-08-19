@@ -57,3 +57,31 @@ percentage points in pair discrimination and six-way accuracy, and by at least
 0.05 cosine, consistently over all MLP seeds. Otherwise sequence-aware adapter
 work remains blocked. Any future collection/server use needs a separately
 reviewed execution approval after these CPU gates pass.
+
+## Frozen-collection task-condition audit and pilot gate
+
+Before the authorized frozen collection, a CPU/MuJoCo task-condition audit
+will render a small deterministic subset. For each group its six target
+positions must equal the corresponding `+X,-X,+Y,-Y,+Z,-Z` 10-cm teacher
+offset from the shared end-effector state (position error at most `1e-12`), and
+their rendered images must have six distinct pixel hashes. The seven joints
+and gripper are generated once per group and reused bit-for-bit for all 24
+condition/visual rows. Thus direction is supplied only by the target's visual
+location; all four visual realizations change only camera/texture/appearance
+factors and retain the same target offset and teacher label.
+
+The fixed collection prompt is: "Move the Panda end effector to the visible
+target safely in simulation." It is identical for all conditions and may not
+contain direction names, signed-axis strings, Cartesian-coordinate wording,
+numeric coordinates, or an equivalent task label. The downstream probe feature
+schema is fixed to Panda proprioceptive state and the frozen pi05 action feature
+only. It never receives target coordinates, direction/group identifiers, prompt
+tokens, pixels, image hashes, or visual-condition IDs.
+
+One group with one canonical visual realization is first sent to the frozen
+server (six requests). Collection proceeds only if all six responses are
+safe/nonempty and the maximum pairwise L2 difference between first actions is
+greater than `1e-4`; otherwise the observation/prompt path is diagnosed before
+any 480-request run. This pilot threshold is an input-path gate, not a model
+quality metric. The full run is exactly 20 groups x 6 directions x 4 visual
+realizations = 480 requests, with the model and all protocol thresholds frozen.
