@@ -12,6 +12,7 @@
 | 18 | Frozen residual-adapter held-out evaluation | All arms 0/24 success at 4 cm; adapters reduce mean final distance from 0.17973 m (raw) to 0.10159--0.10519 m, without seed selection. |
 | 19 | Read-only multi-step failure analysis | Curves show adapter/DLS initial improvement followed by late-horizon stall/drift; zero clips/safe holds, while residual/state-shift attribution is not identifiable from Stage 18 logs. |
 | 20 | Independent CPU-only control feasibility ladder | Direct-position IK 4/4, but diagnostic-selected DLS bridge only 3/4 on one final-test run; bridge/time contract not proven feasible, independent of pi05. |
+| 20B | Independent low-level contract replication | New-split, diagnostic-frozen DLS bridge reaches 4/4 final targets (3.87 cm mean); proves only this analytic simulator contract, not pi05 transfer. |
 
 The Stage 15 result is intentional evidence of a transfer limitation, not a
 system failure. Stage 17 narrows the failure mechanism without changing that

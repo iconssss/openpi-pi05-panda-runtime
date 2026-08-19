@@ -49,6 +49,12 @@ bridge; live one-step and re-observation loops; and a 200-request stress run.
    3/4 final targets; direct-position IK reached 4/4. Thus the fixed bridge/time
    contract is not proven feasible, so Stage 21 sequence-adapter training is
    blocked. This is not a pi05 transfer result.
+9. **Stage 20B - low-level control-contract replication (complete).** A new
+   split and diagnostic-only condition selection froze the Stage 20 reference
+   DLS contract. It achieved 4/4 new final targets with zero clips/safety
+   events (3.87 cm mean); direct IK also achieved 4/4. This unlocks a future,
+   separately pre-registered Stage 21 study, but proves only analytic Panda
+   simulator control feasibility and nothing about pi05 transfer.
 
 ## GPU policy
 

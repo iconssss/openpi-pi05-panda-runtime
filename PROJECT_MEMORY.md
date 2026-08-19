@@ -210,3 +210,18 @@
   clips), DLS bridge 3/4 (4.12 cm mean), direct-position IK 4/4 (3.15 cm).
   The fourth DLS target stopped at 4.75 cm after 120 steps. The 4/4 feasibility
   condition failed, blocking Stage 21 training; this is not a pi05 conclusion.
+## 2026-08-19 — Stage 20B low-level control-contract replication
+
+- Stage 20B used entirely new development and final target offsets, logged a
+  fixed seed (`20260819`) and direct-IK reachability residuals, and ran CPU-only
+  MuJoCo with no pi05 server/request, GPU inference, adapter, or training.
+- Diagnostic-only selection compared four declared DLS contracts. Only the
+  Stage 20 reference condition reached 4/4 (3.82 cm); the three damped/slow
+  alternatives were 0/4. The rule therefore froze the reference contract
+  without viewing final-test outcomes.
+- New final test: no-op 0/4, fixed raw-action bridge 0/4, frozen DLS velocity
+  contract 4/4 (3.87 cm; 0 clips/events), direct-position IK 4/4 (3.17 cm).
+  Final DLS IK residuals were 0.047--0.495 mm and success occurred in 5--8
+  steps. This establishes only low-level analytic Panda simulator feasibility;
+  it permits a separately pre-registered Stage 21 but proves no pi05, adapter,
+  real-robot, calibration, sim-to-real, or safety-certification capability.

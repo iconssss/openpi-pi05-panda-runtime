@@ -84,6 +84,10 @@ cadence, and metrics.
   while the diagnostic-selected closed-loop DLS bridge reaches only 3/4 final
   targets; the fixed bridge/time contract is not yet proven feasible,
   independently of pi05.
+- Stage 20B repairs and independently replicates the low-level analytic control
+  contract on a new split: a diagnostic-frozen DLS velocity bridge reaches 4/4
+  final targets at 3.87 cm mean, alongside direct-position IK at 4/4. This is
+  low-level simulator feasibility only, not π0.5, adapter, or real-robot skill.
 - Stage 16 packages the architecture, evidence table, interview narrative and
   strict presentation boundaries for this project portfolio entry.
 - Headless MuJoCo/EGL and ALOHA smoke testing now pass. ALOHA is deliberately
@@ -143,5 +147,6 @@ python -m unittest discover -s tests -v
 - [Stage 18: frozen-policy action-adapter study](docs/STAGE_18_FROZEN_POLICY_ACTION_ADAPTER.md)
 - [Stage 19: multi-step failure analysis](docs/STAGE_19_MULTISTEP_FAILURE_ANALYSIS.md)
 - [Stage 20: control feasibility ladder](docs/STAGE_20_CONTROL_FEASIBILITY.md)
+- [Stage 20B: control-contract replication](docs/STAGE_20B_CONTROL_CONTRACT_REPLICATION.md)
 - [Results at a glance](docs/RESULTS_AT_A_GLANCE.md)
 - [Forward plan](docs/ROADMAP.md)
