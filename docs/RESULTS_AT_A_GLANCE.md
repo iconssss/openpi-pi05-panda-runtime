@@ -1,22 +1,21 @@
-# Results at a glance
+# Project 2 — Core Results
 
-| Stage | Evidence | Result |
-| --- | --- | --- |
-| 3--7 | Official π0.5 client/server and fault boundaries | Live protocol, safe hold and process-owned reconnection validated. |
-| 10 | First Panda live-policy smoke | Warm response H=15; first action executed once in MuJoCo. |
-| 11 | Re-observation loop | 5/5 replans completed; cycles 1--4 mean RTT 81.10 ms. |
-| 12 | Long stress run | 200/200 synthetic-input cycles; RTT mean/p95 82.61/88.15 ms; 0 safe holds. |
-| 14 | Independent task validation | Zero/random fail; DLS IK oracle succeeds at 3.23 cm <= 4 cm. |
-| 15 | π0.5 task-path suite | 200 requests, 0 safety failures, 0/5 reach successes. |
-| 17 | Pre-registered embodiment-mismatch diagnosis | 72/72 requests, 0 safe holds; identity mapping gives small one-step progress but no long-horizon success claim. |
-| 18 | Frozen residual-adapter held-out evaluation | All arms 0/24 success at 4 cm; adapters reduce mean final distance from 0.17973 m (raw) to 0.10159--0.10519 m, without seed selection. |
-| 19 | Read-only multi-step failure analysis | Curves show adapter/DLS initial improvement followed by late-horizon stall/drift; zero clips/safe holds, while residual/state-shift attribution is not identifiable from Stage 18 logs. |
-| 20 | Independent CPU-only control feasibility ladder | Direct-position IK 4/4, but diagnostic-selected DLS bridge only 3/4 on one final-test run; bridge/time contract not proven feasible, independent of pi05. |
-| 20B | Independent low-level contract replication | New-split, diagnostic-frozen DLS bridge reaches 4/4 final targets (3.87 cm mean); proves only this analytic simulator contract, not pi05 transfer. |
-| 21A | Frozen Cartesian intent probe | No state→target-ID leakage found, but state+real π0.5 fails to beat state-only; concentrated direction labels limit cosine, so Stage 21B is blocked. |
-| 22 | Frozen counterfactual intent evaluation | 480/480 requests, 0 holds, exact group state matching; real π0.5 does not beat state-only or shuffled on held-out six-way/pair metrics, so the sequence-adapter gate fails. |
+This table intentionally contains only the evidence that determines the final
+claim. Detailed stage-by-stage protocols remain linked from the README.
 
-The Stage 15 result is intentional evidence of a transfer limitation, not a
-system failure. Stage 17 narrows the failure mechanism without changing that
-conclusion. See [Stage 16](STAGE_16_INTERVIEW_PACKAGE.md) for the narrative and
-presentation boundaries.
+| Decision question | Locked evidence | Result | Consequence |
+| --- | --- | --- | --- |
+| Is the remote VLA runtime usable as a bounded software path? | Official π0.5 checkpoint/server; process-owned 5-s deadline; 200-request stress | Valid request/action path; 0 safe holds in stress; warm RTT mean/p95 82.61/88.15 ms | Runtime/safety engineering is demonstrated. |
+| Does frozen DROID action zero-shot transfer to Panda reach? | Five IK-reachable targets, 200 policy requests | 0/5 reach success | No zero-shot Panda-skill claim. |
+| Does a frozen residual action adapter solve it? | Three diagnostic-trained seeds; fixed 4-target × 6-visual held-out set; 40 steps | All arms 0/24 success. Mean final distance: raw 0.17973 m; adapters 0.10159–0.10519 m | Distance reduction is not task success. |
+| Is the low-level Panda velocity contract itself infeasible? | Stage 20B new split, analytic DLS and direct IK | DLS 4/4 at 3.87 cm; direct IK 4/4 | The tested simulator control contract is feasible; this is not a VLA result. |
+| Does final π0.5 DROID action add transferable Cartesian intent? | Stage 22 exact-same-state, balanced ±X/±Y/±Z groups; 480 frozen requests | State+real action does not beat state-only or shuffled control on held-out six-way/pair metrics | Sequence adapter is blocked. |
+| Do upstream latents answer the remaining semantic question? | Stage 23 action-equivalence preflight | Instrumentation changed action feature by 0.00378194 > 1e-5; no full extraction | Instrumentation validity failure, not a latent negative result. |
+
+## Final interpretation
+
+Project 2 proves a safe remote-inference and cross-embodiment evaluation
+workflow, not a successful transferred Panda policy. The frozen π0.5→Panda
+research path is closed by a pre-registered stop rule. No real-robot,
+calibration, sim-to-real, safety-certification, or upstream-semantic claim is
+made.

@@ -84,6 +84,15 @@ semantic-equivalence preflight (0.00378194 > 1e-5). It made no full extraction
 or held-out probe. Project 2 is frozen for experimentation; next work is Route
 A portfolio packaging and Route D Project 3.
 
+## Finalization and next project
+
+Project 2 is complete. Remaining work is presentation-only: final summary,
+evidence-chain diagram, concise results, and interview preparation. Project 3
+is planned as a separate visual diffusion-policy ManiSkill manipulation study
+with independent train/validation/final pose and visual splits, closed-loop
+success-rate evaluation, and a positive-result gate. No Project 3 environment,
+dataset, model, or GPU work has started.
+
 ## GPU policy
 
 The 4090 is used for loaded π0.5 inference experiments only. Each future run

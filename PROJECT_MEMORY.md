@@ -287,3 +287,15 @@
 - The Project 2 stop boundary is now active: no further pi05-to-Panda adapter,
   recurrent model, LoRA, fine-tuning, or benchmark redesign. Freeze the project
   for packaging and redirect new experimental effort to Project 3.
+
+## 2026-08-20 - Project 2 finalization and Project 3 planning
+
+- Project 2's research status is frozen. The public portfolio surface is now a
+  compact causal evidence chain, core-results table, final summary, and
+  interview guide. Its supported identity is safe VLA cross-embodiment
+  deployment and failure attribution—not transferred Panda skill.
+- Project 3 is planned, not started: a visual diffusion action-chunk policy on
+  a held-out ManiSkill pick-and-place benchmark. It is a separate simulator IL
+  project intended to demonstrate a credible positive learned-policy result;
+  no environment, dataset, checkpoint, GPU server, or large download was
+  started during planning.
