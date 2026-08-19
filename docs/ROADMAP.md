@@ -26,10 +26,15 @@ bridge; live one-step and re-observation loops; and a 200-request stress run.
    completed 72 live requests with zero safe holds. Identity is directionally
    preferable to the two diagnostic alternatives, but its millimetre-scale
    progress is insufficient for a transfer claim.
-6. **Stage 18 - frozen-policy action-adapter study (next).** Create an IK
-   expert-labelled Panda dataset using diagnostic targets only, train a bounded
-   residual adapter, and report final results exclusively on the Stage 17
-   held-out targets and visual conditions.
+6. **Stage 18 - frozen-policy action-adapter study (complete).** A
+   diagnostic-target-only DLS-labelled dataset trained three frozen bounded
+   residual adapters. Held-out evaluation used exactly Stage 17 targets 8--11
+   and six fixed visual conditions (24 episodes / arm, 40 steps / episode).
+   All 120 episodes completed with zero safe holds; raw pi05 identity and all
+   adapters were 0/24 successes at 4 cm. Adapters reduced mean final distance
+   from 0.17973 m (raw) to 0.10350 / 0.10159 / 0.10519 m (seeds 11/22/33), but
+   do not support a Panda task-success or native-transfer claim. The analytic
+   DLS reference was also 0/24 at this 40-step horizon and is not learned.
 
 ## GPU policy
 

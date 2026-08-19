@@ -169,3 +169,17 @@
 - [ ] Stage 3：接入更真实的 simulator 或 mock task evaluation。
 - [ ] Stage 4：latency / execution horizon ablation。
 - [ ] Stage 5：面试导向 README、架构图、结果与限制说明。
+## 2026-08-19 — Stage 18 frozen-policy residual-adapter held-out evaluation
+
+- The evaluator locks Stage 17 held-out targets 8--11, six fixed visuals, 40
+  steps/episode, raw identity, all frozen adapter seeds (11/22/33), and DLS.
+  No held-out outcome tuned, selected, or retrained an adapter.
+- 24 episodes per arm / 120 total all completed with zero safe holds and zero
+  bridge clips. Success at 4 cm was 0/24 for raw, each seed, and DLS. Mean
+  final distance: raw 0.17973 m; seeds 11/22/33: 0.10350/0.10159/0.10519 m;
+  DLS 0.10194 m. This distance improvement is not task success; DLS is not a
+  learned policy.
+- Raw report stays only on remote shared storage:
+  `/root/shared-nvme/openpi-robot-runtime/results/stage18_held_out_evaluation/report.json`.
+  The run-specific policy server was SIGTERM-stopped; GPU was 0% / 1 MiB and
+  shared disk had 21 GB free.

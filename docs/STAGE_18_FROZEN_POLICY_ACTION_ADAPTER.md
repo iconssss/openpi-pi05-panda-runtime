@@ -46,3 +46,26 @@ sequentially because the server consumes about 20.9 GB of 24 GB VRAM. The
 planned collection, training, and held-out evaluation budget is about 1--1.5
 RTX 4090 hours (roughly RMB 2--3 at the stated rate), with data and results
 stored under `/root/shared-nvme/openpi-robot-runtime/results/`.
+
+## Held-out result (2026-08-19)
+
+The evaluation was run once after training, with no held-out-driven tuning,
+seed selection, or retraining. It used exactly Stage 17 held-out targets 8--11,
+all six fixed visual conditions, and 40 first-action-only control steps per
+episode: 24 episodes per arm. Raw JSON remains at
+`/root/shared-nvme/openpi-robot-runtime/results/stage18_held_out_evaluation/report.json`.
+
+| Arm | Successes | Safe holds | Mean final distance (m) | Mean / p95 pi05 RTT (ms) |
+| --- | ---: | ---: | ---: | ---: |
+| Raw pi05 identity | 0 / 24 | 0 | 0.17973 | 82.66 / 85.84 |
+| Residual adapter seed 11 | 0 / 24 | 0 | 0.10350 | 82.39 / 85.47 |
+| Residual adapter seed 22 | 0 / 24 | 0 | 0.10159 | 82.53 / 86.14 |
+| Residual adapter seed 33 | 0 / 24 | 0 | 0.10519 | 82.34 / 85.34 |
+| DLS oracle (analytic upper bound) | 0 / 24 | 0 | 0.10194 | n/a |
+
+All 120 episodes completed all 40 steps, with zero bridge-clipped steps. The
+common mean initial distance was 0.13601 m and success threshold was 0.04 m.
+The three frozen adapters improve final distance versus raw identity, but none
+establishes reach success; seed 22 is reported as one of all pre-registered
+results, not selected as a winner. DLS is an analytic upper bound, not a
+learned policy.

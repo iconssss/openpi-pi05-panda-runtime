@@ -67,6 +67,13 @@ cadence, and metrics.
   action interpretation had positive one-step geometric progress on 2/3 of
   diagnostic cases and 5/8 of held-out cases, but only at millimetre scale;
   this does not contradict the Stage 15 0/5 long-horizon result.
+- Stage 18 evaluates three frozen diagnostic-target-trained bounded residual
+  adapters only on the Stage 17 held-out four targets and six fixed visual
+  conditions. All 120 forty-step episodes completed without safe holds, but
+  raw identity and every adapter remained 0/24 successes at the 4-cm threshold.
+  Adapters reduced mean final distance from 0.17973 m (raw) to
+  0.10350/0.10159/0.10519 m (seeds 11/22/33); this is not a Panda skill or
+  native-transfer claim, and no seed was selected from held-out results.
 - Stage 16 packages the architecture, evidence table, interview narrative and
   strict presentation boundaries for this project portfolio entry.
 - Headless MuJoCo/EGL and ALOHA smoke testing now pass. ALOHA is deliberately
@@ -123,5 +130,6 @@ python -m unittest discover -s tests -v
 - [Stage 15: live π0.5 Panda reach suite](docs/STAGE_15_REACH_SUITE.md)
 - [Stage 16: interview package](docs/STAGE_16_INTERVIEW_PACKAGE.md)
 - [Stage 17: embodiment-mismatch diagnosis](docs/STAGE_17_EMBODIMENT_MISMATCH.md)
+- [Stage 18: frozen-policy action-adapter study](docs/STAGE_18_FROZEN_POLICY_ACTION_ADAPTER.md)
 - [Results at a glance](docs/RESULTS_AT_A_GLANCE.md)
 - [Forward plan](docs/ROADMAP.md)
