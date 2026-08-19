@@ -225,3 +225,15 @@
   steps. This establishes only low-level analytic Panda simulator feasibility;
   it permits a separately pre-registered Stage 21 but proves no pi05, adapter,
   real-robot, calibration, sim-to-real, or safety-certification capability.
+## 2026-08-19 — Stage 21A frozen Cartesian intent probe (negative)
+
+- New frozen pi05 data: 1,440/1,440 rows, 0 safe holds, target-level 960/240/240
+  train/validation/test. The feature was only 16-D first-action plus chunk mean;
+  target/hand geometry remained labels-only. Server stopped before CPU probes.
+- State+real pi05 MLP was worse in MSE (0.01369 ± 0.00023) than state-only
+  (0.01133 ± 0.00042), and failed the locked gate against state-only and shuffled
+  action. Stage 21B is blocked.
+- State-to-target-ID nearest-centroid audit was 6.67% versus 6.25% chance: no
+  target proxy evidence. Constant label direction cosine was already 0.84831,
+  so the direction distribution is concentrated and cosine cannot stand alone
+  as evidence of pi05 Cartesian intent.

@@ -55,6 +55,11 @@ bridge; live one-step and re-observation loops; and a 200-request stress run.
    events (3.87 cm mean); direct IK also achieved 4/4. This unlocks a future,
    separately pre-registered Stage 21 study, but proves only analytic Panda
    simulator control feasibility and nothing about pi05 transfer.
+10. **Stage 21A - frozen Cartesian intent probe (complete, negative).** On a
+    target-level held-out split, state+real pi05 MLP MSE (0.01369) did not beat
+    state-only (0.01133), and did not pass its shuffled-control gate. No target
+    ID proxy was found, but direction labels are concentrated (constant cosine
+    0.848), so high cosine is not transfer evidence. Stage 21B is blocked.
 
 ## GPU policy
 

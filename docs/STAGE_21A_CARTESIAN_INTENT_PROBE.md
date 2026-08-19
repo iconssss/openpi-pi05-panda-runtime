@@ -86,3 +86,38 @@ GPU server runs start with GPU/disk preflight and a separate no-control warm-up,
 then end by SIGTERM-ing only that server and rechecking GPU/disk. Stage 21B is
 permitted only if the locked gate above passes. Any later sequence model needs
 a separately pre-registered training distribution and independent final test.
+
+## Final result (2026-08-19)
+
+The frozen collection completed 1,440/1,440 rows with zero safe holds:
+960/240/240 target-level train/validation/test rows. The pi05 server was
+SIGTERM-stopped before CPU-only probe fitting. All rows used the frozen 16-D
+`[first action, chunk mean]` feature, and target/hand geometry remained
+label-only.
+
+| Probe | n | Test MSE (mean ± std) | Cosine (mean ± std) | Correct direction |
+| --- | ---: | ---: | ---: | ---: |
+| Linear state-only | 1 | 0.01540 | 0.99064 | 1.000 |
+| Linear pi05-only | 1 | 0.09099 | 0.85587 | 1.000 |
+| Linear state + real pi05 | 1 | 0.01552 | 0.99001 | 1.000 |
+| Linear state + shuffled pi05 | 3 shuffles | 0.01577 ± 0.00025 | 0.99015 ± 0.00024 | 1.000 |
+| MLP state-only | 3 init seeds | 0.01133 ± 0.00042 | 0.98464 ± 0.00067 | 1.000 |
+| MLP pi05-only | 3 init seeds | 0.09476 ± 0.00076 | 0.85339 ± 0.00181 | 1.000 |
+| MLP state + real pi05 | 3 init seeds | 0.01369 ± 0.00023 | 0.98466 ± 0.00010 | 1.000 |
+| MLP state + shuffled pi05 | 3 init × 3 shuffle seeds | 0.01460 ± 0.00055 | 0.98360 ± 0.00101 | 1.000 |
+
+The target-proxy audit found a within-training-target nearest-centroid accuracy
+of 6.67%, essentially the 16-way chance value of 6.25%. There is therefore no
+evidence that Panda state leaked target ID. However, a constant direction from
+the training labels already reaches test cosine 0.84831, positive-direction
+rate 1.000, and `cos > 0.5` rate 0.9917. The Cartesian direction distribution
+is highly concentrated, so cosine and correct-direction rate alone have weak
+discriminative value; pi05-only cosine must be interpreted against this
+constant baseline.
+
+The locked MLP gate fails: state + real pi05 has *higher* MSE than state-only
+(0.01369 versus 0.01133), no material cosine/direction advantage, and does not
+meet the required simultaneous improvement over either state-only or shuffled
+control. The final conclusion is: **frozen pi05 action output did not provide
+measurable incremental Cartesian intent information beyond Panda state under
+the tested setup.** Stage 21B is blocked.

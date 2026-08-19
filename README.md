@@ -88,6 +88,10 @@ cadence, and metrics.
   contract on a new split: a diagnostic-frozen DLS velocity bridge reaches 4/4
   final targets at 3.87 cm mean, alongside direct-position IK at 4/4. This is
   low-level simulator feasibility only, not π0.5, adapter, or real-robot skill.
+- Stage 21A finds no incremental Cartesian intent signal from frozen π0.5
+  actions beyond Panda state on a target-level held-out probe; Stage 21B is
+  blocked. The direction distribution is concentrated, so high cosine alone is
+  not interpreted as semantic transfer evidence.
 - Stage 16 packages the architecture, evidence table, interview narrative and
   strict presentation boundaries for this project portfolio entry.
 - Headless MuJoCo/EGL and ALOHA smoke testing now pass. ALOHA is deliberately
@@ -148,5 +152,6 @@ python -m unittest discover -s tests -v
 - [Stage 19: multi-step failure analysis](docs/STAGE_19_MULTISTEP_FAILURE_ANALYSIS.md)
 - [Stage 20: control feasibility ladder](docs/STAGE_20_CONTROL_FEASIBILITY.md)
 - [Stage 20B: control-contract replication](docs/STAGE_20B_CONTROL_CONTRACT_REPLICATION.md)
+- [Stage 21A: Cartesian intent probe](docs/STAGE_21A_CARTESIAN_INTENT_PROBE.md)
 - [Results at a glance](docs/RESULTS_AT_A_GLANCE.md)
 - [Forward plan](docs/ROADMAP.md)
