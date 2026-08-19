@@ -11,6 +11,7 @@
 | 17 | Pre-registered embodiment-mismatch diagnosis | 72/72 requests, 0 safe holds; identity mapping gives small one-step progress but no long-horizon success claim. |
 | 18 | Frozen residual-adapter held-out evaluation | All arms 0/24 success at 4 cm; adapters reduce mean final distance from 0.17973 m (raw) to 0.10159--0.10519 m, without seed selection. |
 | 19 | Read-only multi-step failure analysis | Curves show adapter/DLS initial improvement followed by late-horizon stall/drift; zero clips/safe holds, while residual/state-shift attribution is not identifiable from Stage 18 logs. |
+| 20 | Independent CPU-only control feasibility ladder | Direct-position IK 4/4, but diagnostic-selected DLS bridge only 3/4 on one final-test run; bridge/time contract not proven feasible, independent of pi05. |
 
 The Stage 15 result is intentional evidence of a transfer limitation, not a
 system failure. Stage 17 narrows the failure mechanism without changing that

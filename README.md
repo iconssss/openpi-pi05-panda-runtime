@@ -79,6 +79,11 @@ cadence, and metrics.
   with zero safe holds and bridge clips. The logged data cannot separately
   identify residual-vector error, joint-limit proximity, or state-distribution
   shift; those are Stage 20 hypotheses, not conclusions.
+- Stage 20 separates the controller contract from VLA transfer using a new
+  target split and CPU-only MuJoCo ladder. Direct-position IK succeeds 4/4,
+  while the diagnostic-selected closed-loop DLS bridge reaches only 3/4 final
+  targets; the fixed bridge/time contract is not yet proven feasible,
+  independently of pi05.
 - Stage 16 packages the architecture, evidence table, interview narrative and
   strict presentation boundaries for this project portfolio entry.
 - Headless MuJoCo/EGL and ALOHA smoke testing now pass. ALOHA is deliberately
@@ -137,5 +142,6 @@ python -m unittest discover -s tests -v
 - [Stage 17: embodiment-mismatch diagnosis](docs/STAGE_17_EMBODIMENT_MISMATCH.md)
 - [Stage 18: frozen-policy action-adapter study](docs/STAGE_18_FROZEN_POLICY_ACTION_ADAPTER.md)
 - [Stage 19: multi-step failure analysis](docs/STAGE_19_MULTISTEP_FAILURE_ANALYSIS.md)
+- [Stage 20: control feasibility ladder](docs/STAGE_20_CONTROL_FEASIBILITY.md)
 - [Results at a glance](docs/RESULTS_AT_A_GLANCE.md)
 - [Forward plan](docs/ROADMAP.md)

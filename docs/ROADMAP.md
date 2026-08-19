@@ -43,6 +43,12 @@ bridge; live one-step and re-observation loops; and a 200-request stress run.
    joint-limit, or state-distribution causality because those per-step signals
    were not logged. Any Stage 20 training proposal requires a new pre-registered
    training distribution and independent test set.
+8. **Stage 20 - control feasibility ladder (complete).** New diagnostic/final
+   target splits isolated CPU-only Panda control from pi05. Diagnostic selection
+   froze a 0.20-s, 120-step DLS bridge (4/4 diagnostic), but it reached only
+   3/4 final targets; direct-position IK reached 4/4. Thus the fixed bridge/time
+   contract is not proven feasible, so Stage 21 sequence-adapter training is
+   blocked. This is not a pi05 transfer result.
 
 ## GPU policy
 

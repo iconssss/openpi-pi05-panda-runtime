@@ -198,3 +198,15 @@
   Stage 19 explicitly treats them as unidentifiable rather than causal claims.
   Stage 20 must pre-register a separate training distribution and independent
   test set before any new model is trained.
+## 2026-08-19 — Stage 20 CPU-only Panda control feasibility ladder
+
+- Stage 20 pre-registered a new four-target diagnostic split and separate
+  four-target final split. It ran no pi05 server/request, adapter, or training;
+  CUDA was disabled and GPU stayed idle.
+- Diagnostic DLS selection: 40-step existing bridge was 0/4 (9.31 cm),
+  120-step existing bridge 0/4 (13.03 cm), and 0.20-s/120-step bridge 4/4
+  (3.91 cm), so only the last condition entered final test.
+- Final: no-op 0/4, fixed raw-action bridge 0/4 (328 expected fixed-vector
+  clips), DLS bridge 3/4 (4.12 cm mean), direct-position IK 4/4 (3.15 cm).
+  The fourth DLS target stopped at 4.75 cm after 120 steps. The 4/4 feasibility
+  condition failed, blocking Stage 21 training; this is not a pi05 conclusion.
