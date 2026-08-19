@@ -71,6 +71,14 @@ responses after audit/pilot gates, but state+real π0.5 did not beat state-only
 and shuffled controls by the locked six-way, pairwise, and cosine margins.
 Sequence-aware adapter work remains blocked.
 
+## Post-Stage-22 decision
+
+Frozen DROID action transfer is closed. The only remaining Project 2 research
+candidate is the pre-registered Stage 23 upstream-representation probe on the
+same Stage 22 groups. It is capped at 2 GPU-hours and 2 GB of new artifacts. A
+failed Stage 23 gate freezes all pi05-to-Panda adaptation, followed by portfolio
+packaging and a new Project 3; target-embodiment fine-tuning is not authorized.
+
 ## GPU policy
 
 The 4090 is used for loaded π0.5 inference experiments only. Each future run

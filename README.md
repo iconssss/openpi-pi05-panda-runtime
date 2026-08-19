@@ -160,5 +160,7 @@ python -m unittest discover -s tests -v
 - [Stage 20B: control-contract replication](docs/STAGE_20B_CONTROL_CONTRACT_REPLICATION.md)
 - [Stage 21A: Cartesian intent probe](docs/STAGE_21A_CARTESIAN_INTENT_PROBE.md)
 - [Stage 22: counterfactual intent benchmark](docs/STAGE_22_COUNTERFACTUAL_INTENT_BENCHMARK.md)
+- [Post-Stage-22 strategic assessment](docs/POST_STAGE22_STRATEGIC_ASSESSMENT.md)
+- [Stage 23: upstream representation probe](docs/STAGE_23_UPSTREAM_REPRESENTATION_PROBE.md)
 - [Results at a glance](docs/RESULTS_AT_A_GLANCE.md)
 - [Forward plan](docs/ROADMAP.md)

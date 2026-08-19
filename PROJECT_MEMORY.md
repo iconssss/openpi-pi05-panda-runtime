@@ -260,3 +260,16 @@
   state-only or shuffled action on either six-way or opposite-pair
   discrimination. Stage 22's locked gate fails; sequence-aware adapter work
   remains blocked. This is not a real-robot or sim-to-real result.
+
+## 2026-08-19 - Post-Stage-22 strategy
+
+- The frozen DROID robot-facing action-transfer line is formally closed as the
+  main research path. The evidence chain is deployment -> zero-shot failure ->
+  diagnosis -> residual adaptation -> trajectory analysis -> low-level-control
+  isolation -> incremental-information probes -> counterfactual test.
+- One bounded Stage 23 upstream-representation probe is the sole remaining
+  Project 2 experiment candidate. It uses the frozen Stage 22 groups and an
+  optional checkpoint-preserving OpenPI instrumentation path. Total remaining
+  Project 2 GPU budget is capped at 2 hours and storage at 2 GB. Failure closes
+  all pi05-to-Panda adaptation experiments, followed by portfolio packaging and
+  a new Project 3; no fine-tuning is authorized.
