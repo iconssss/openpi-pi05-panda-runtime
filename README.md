@@ -92,6 +92,9 @@ cadence, and metrics.
   actions beyond Panda state on a target-level held-out probe; Stage 21B is
   blocked. The direction distribution is concentrated, so high cosine alone is
   not interpreted as semantic transfer evidence.
+- Stage 22 is pre-registered and CPU-validated only: exact state-matched
+  counterfactual ±X/±Y/±Z tasks eliminate the concentrated-direction constant
+  baseline and state shortcut before any future frozen π0.5 collection.
 - Stage 16 packages the architecture, evidence table, interview narrative and
   strict presentation boundaries for this project portfolio entry.
 - Headless MuJoCo/EGL and ALOHA smoke testing now pass. ALOHA is deliberately
@@ -153,5 +156,6 @@ python -m unittest discover -s tests -v
 - [Stage 20: control feasibility ladder](docs/STAGE_20_CONTROL_FEASIBILITY.md)
 - [Stage 20B: control-contract replication](docs/STAGE_20B_CONTROL_CONTRACT_REPLICATION.md)
 - [Stage 21A: Cartesian intent probe](docs/STAGE_21A_CARTESIAN_INTENT_PROBE.md)
+- [Stage 22: counterfactual intent benchmark](docs/STAGE_22_COUNTERFACTUAL_INTENT_BENCHMARK.md)
 - [Results at a glance](docs/RESULTS_AT_A_GLANCE.md)
 - [Forward plan](docs/ROADMAP.md)

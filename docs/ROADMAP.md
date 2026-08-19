@@ -60,6 +60,11 @@ bridge; live one-step and re-observation loops; and a 200-request stress run.
     state-only (0.01133), and did not pass its shuffled-control gate. No target
     ID proxy was found, but direction labels are concentrated (constant cosine
     0.848), so high cosine is not transfer evidence. Stage 21B is blocked.
+11. **Stage 22 - counterfactual intent benchmark (pre-registered, CPU gate
+    passed).** Exact same-state ±X/±Y/±Z task pairs have balanced directions,
+    zero constant-direction cosine, and 1/6 state-only condition chance. No
+    pi05 collection is authorized by this record alone; any such collection
+    requires a separate approval after reviewing this benchmark.
 
 ## GPU policy
 

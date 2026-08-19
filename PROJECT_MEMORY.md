@@ -237,3 +237,14 @@
   target proxy evidence. Constant label direction cosine was already 0.84831,
   so the direction distribution is concentrated and cosine cannot stand alone
   as evidence of pi05 Cartesian intent.
+## 2026-08-19 — Stage 22 counterfactual benchmark design (CPU-only)
+
+- Stage 22 pre-registers 20 state groups with six exact same-state task
+  conditions each: ±X, ±Y, ±Z. Groups—not individual pair members—split into
+  train/validation/test, preventing cross-split counterfactual leakage.
+- CPU audit passed: each split is direction-balanced, constant-direction cosine
+  is 0, maximum within-group state delta is 0, and state-only condition chance
+  is 1/6. Mock state-only pair discrimination is 0. No pi05 server, action
+  collection, adapter training, or GPU use occurred.
+- Recommended eventual collection is 20 groups × 6 conditions × 4 visual
+  realizations = 480 frozen requests, only after explicit review/authorization.
