@@ -119,3 +119,14 @@ load/warm-up, extraction, and immediate SIGTERM are mandatory; stop sooner if
 the pilot shows missing/degenerate latent output. Storage is capped at 2 GB of
 new remote Stage 23 artifacts by pooling/casting features, with raw images not
 persisted.
+
+## Stage 23 execution update (2026-08-20)
+
+Stage 23 was stopped at its mandatory instrumentation preflight. Although the
+three declared side channels were finite and varied by condition, their custom
+sampling path changed the frozen Stage 22 pilot action feature by up to
+`0.00378194`, exceeding the locked `1e-5` semantic-equivalence tolerance. The
+full 480-row extraction and held-out representation probe were therefore not
+run. This prevents a representation claim in either direction. Per the bounded
+route and stop rule, Project 2 is now frozen for research experimentation;
+Route A packaging and Route D (a new positive-task Project 3) are recommended.

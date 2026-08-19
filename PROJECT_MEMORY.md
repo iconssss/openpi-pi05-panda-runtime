@@ -273,3 +273,17 @@
   Project 2 GPU budget is capped at 2 hours and storage at 2 GB. Failure closes
   all pi05-to-Panda adaptation experiments, followed by portfolio packaging and
   a new Project 3; no fine-tuning is authorized.
+
+## 2026-08-20 - Stage 23 instrumentation preflight blocked
+
+- The frozen instrumentation pilot returned 6/6 responses with finite,
+  condition-varying pooled prefix (2048-D) and action-expert (1024-D) features,
+  but failed its mandatory action-semantic equivalence check against the fixed
+  Stage 22 pilot: max absolute action-feature delta 0.00378194 > 1e-5.
+- No 480-observation extraction, latent probe, PCA, or held-out representation
+  gate was run. The server was SIGTERM-stopped; GPU returned to 0% / 1 MiB and
+  Stage 23 artifacts were only 347 KB. This is instrumentation invalidity, not
+  evidence for or against latent task semantics.
+- The Project 2 stop boundary is now active: no further pi05-to-Panda adapter,
+  recurrent model, LoRA, fine-tuning, or benchmark redesign. Freeze the project
+  for packaging and redirect new experimental effort to Project 3.

@@ -96,3 +96,26 @@ storage. No dependency, checkpoint download, weight update, adapter training,
 or official fine-tuning is authorized. Any need for a larger feature dump,
 longer execution, new dependency, or a second test collection stops for a new
 decision. After the one extraction, SIGTERM the server and verify GPU/disk.
+
+## Execution result — preflight blocked (2026-08-20)
+
+The only permitted instrumentation server was loaded once, then used for the
+no-control warm-up and six-condition pilot. The side-channel itself was finite
+and non-degenerate: 6/6 responses, 0 safe holds, 2048-D mean-pooled prefix and
+1024-D mean-pooled action-expert/pre-output vectors, with cross-condition
+maximum L2 3.3079 and 8.1509 respectively. Pre-output was byte-identical to
+the action-expert pooled vector, as anticipated, so it is not independent.
+
+However, the mandatory action-semantic check **failed**. Against the frozen
+Stage 22 pilot's same six observations and action feature, maximum absolute
+difference was `0.00378194`, above the locked `1e-5` threshold. Therefore the
+instrumentation cannot be treated as observational-only. No 480-row extraction,
+latent probe, PCA, or held-out gate evaluation was run. This is neither a
+positive nor negative result about upstream task semantics; it is an
+instrumentation-validity failure.
+
+The run-specific server was SIGTERM-stopped immediately. GPU returned to 0% /
+1 MiB; persistent Stage 23 artifacts total 347 KB. Under the project's
+no-repeat/no-redesign stop boundary, this blocks further π0.5→Panda adaptation
+experimentation and triggers Project 2 freeze and portfolio packaging. No
+adapter, recurrent model, LoRA, or fine-tuning is authorized.

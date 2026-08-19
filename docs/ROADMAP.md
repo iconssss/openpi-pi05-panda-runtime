@@ -79,6 +79,11 @@ same Stage 22 groups. It is capped at 2 GPU-hours and 2 GB of new artifacts. A
 failed Stage 23 gate freezes all pi05-to-Panda adaptation, followed by portfolio
 packaging and a new Project 3; target-embodiment fine-tuning is not authorized.
 
+**Execution update:** Stage 23's instrumentation pilot failed the locked action
+semantic-equivalence preflight (0.00378194 > 1e-5). It made no full extraction
+or held-out probe. Project 2 is frozen for experimentation; next work is Route
+A portfolio packaging and Route D Project 3.
+
 ## GPU policy
 
 The 4090 is used for loaded π0.5 inference experiments only. Each future run

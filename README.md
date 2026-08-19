@@ -98,6 +98,10 @@ cadence, and metrics.
   the sequence-aware adapter gate fails. The benchmark's exact state-matched
   counterfactual ±X/±Y/±Z tasks eliminate the concentrated-direction constant
   baseline and state shortcut before any future frozen π0.5 collection.
+- Stage 23 stopped at its mandatory instrumentation validity preflight: the
+  latent side-channel changed the frozen action feature beyond its locked
+  tolerance, so no latent dataset or representation conclusion was produced.
+  Project 2 is frozen for further adaptation experiments.
 - Stage 16 packages the architecture, evidence table, interview narrative and
   strict presentation boundaries for this project portfolio entry.
 - Headless MuJoCo/EGL and ALOHA smoke testing now pass. ALOHA is deliberately
