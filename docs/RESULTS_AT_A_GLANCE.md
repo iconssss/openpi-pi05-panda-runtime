@@ -14,7 +14,7 @@
 | 20 | Independent CPU-only control feasibility ladder | Direct-position IK 4/4, but diagnostic-selected DLS bridge only 3/4 on one final-test run; bridge/time contract not proven feasible, independent of pi05. |
 | 20B | Independent low-level contract replication | New-split, diagnostic-frozen DLS bridge reaches 4/4 final targets (3.87 cm mean); proves only this analytic simulator contract, not pi05 transfer. |
 | 21A | Frozen Cartesian intent probe | No state→target-ID leakage found, but state+real π0.5 fails to beat state-only; concentrated direction labels limit cosine, so Stage 21B is blocked. |
-| 22 | Counterfactual benchmark CPU validation | Exact state-matched ±axis pairs yield constant cosine 0 and state-only task-condition chance 1/6; no π0.5 collection yet. |
+| 22 | Frozen counterfactual intent evaluation | 480/480 requests, 0 holds, exact group state matching; real π0.5 does not beat state-only or shuffled on held-out six-way/pair metrics, so the sequence-adapter gate fails. |
 
 The Stage 15 result is intentional evidence of a transfer limitation, not a
 system failure. Stage 17 narrows the failure mechanism without changing that

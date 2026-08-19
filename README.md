@@ -92,7 +92,10 @@ cadence, and metrics.
   actions beyond Panda state on a target-level held-out probe; Stage 21B is
   blocked. The direction distribution is concentrated, so high cosine alone is
   not interpreted as semantic transfer evidence.
-- Stage 22 is pre-registered and CPU-validated only: exact state-matched
+- Stage 22 completed its frozen counterfactual evaluation: 480/480 requests,
+  0 safe holds, and exact same-group state matching. Held-out state+real π0.5
+  did not beat state-only or shuffled controls on six-way/pairwise intent, so
+  the sequence-aware adapter gate fails. The benchmark's exact state-matched
   counterfactual ±X/±Y/±Z tasks eliminate the concentrated-direction constant
   baseline and state shortcut before any future frozen π0.5 collection.
 - Stage 16 packages the architecture, evidence table, interview narrative and

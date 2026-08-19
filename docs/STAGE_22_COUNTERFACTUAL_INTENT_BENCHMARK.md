@@ -85,3 +85,38 @@ greater than `1e-4`; otherwise the observation/prompt path is diagnosed before
 any 480-request run. This pilot threshold is an input-path gate, not a model
 quality metric. The full run is exactly 20 groups x 6 directions x 4 visual
 realizations = 480 requests, with the model and all protocol thresholds frozen.
+
+## Authorized frozen collection and final result (2026-08-19)
+
+The task-condition audit passed before server start. Two deterministic groups
+had bit-identical seven-joint state across all six conditions; target-position
+error was `0.0 m`; and all six canonical renders had distinct pixel hashes.
+The fixed neutral prompt passed the forbidden-token check. A no-control
+warm-up and six-condition pilot then returned 6/6 usable responses, 0 safe
+holds, and maximum first-action pairwise L2 `1.21541` (pilot gate `>1e-4`).
+
+The frozen run returned 480/480 responses (20 groups x 6 directions x 4
+visuals), with 0 safe holds. It retained 288/96/96 train/validation/test rows,
+80 rows per direction, and exact within-group state delta `0.0`. The server was
+SIGTERM-stopped immediately afterward; GPU returned to 0% / 1 MiB. Raw JSON
+and images remain on the remote shared disk/ignored artifacts.
+
+Held-out probe results below are mean +/- std over initialization seeds
+11/22/33; shuffled controls aggregate three training-shuffle seeds
+101/202/303 x the same initialization seeds. MLP is a fixed small NumPy ReLU
+probe because the established runtime has no scikit-learn dependency.
+
+| Probe | Linear cosine / six-way / opposite-pair | MLP cosine / six-way / opposite-pair |
+| --- | --- | --- |
+| Constant +X | 0.000 / 0.1667 / 0.000 | same |
+| State-only | 0.000 +/- 0.000 / 0.1667 / 0.000 | 0.000 +/- 0.000 / 0.1667 / 0.000 |
+| pi05-only | -0.0396 / 0.1771 / 0.0833 | -0.0310 +/- 0.0250 / 0.1528 +/- 0.0520 / 0.1389 +/- 0.0393 |
+| State + real pi05 | -0.0241 / 0.1667 / 0.1667 | 0.0139 +/- 0.0416 / 0.1736 +/- 0.0177 / 0.0833 +/- 0.0680 |
+| State + shuffled pi05 | 0.0374 +/- 0.0306 / 0.1701 +/- 0.0196 / 0.2500 +/- 0.0680 | -0.0042 +/- 0.0467 / 0.1644 +/- 0.0321 / 0.1111 +/- 0.0680 |
+
+The real feature does not exceed both state-only and shuffled controls by the
+pre-registered 0.10 six-way/pairwise and 0.05 cosine margins in either probe
+family. Therefore the Stage 22 gate **fails** and sequence-aware adapter work
+remains blocked. This is a negative result about frozen pi05 incremental
+task-conditioned Cartesian intent in this matched simulator benchmark; it is
+not evidence about real robots, sim-to-real, or a trained adapter.

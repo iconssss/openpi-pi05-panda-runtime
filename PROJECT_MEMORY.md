@@ -248,3 +248,15 @@
   collection, adapter training, or GPU use occurred.
 - Recommended eventual collection is 20 groups × 6 conditions × 4 visual
   realizations = 480 frozen requests, only after explicit review/authorization.
+
+## 2026-08-19 - Stage 22 frozen counterfactual result (negative)
+
+- Pre-server task audit and pilot passed: same-group state delta 0, target error
+  0, six distinct target renders, neutral prompt, and pilot action L2 1.21541.
+  Formal frozen collection was 480/480 with 0 safe holds; the server was then
+  SIGTERM-stopped and GPU returned to 0% / 1 MiB.
+- The held-out direction-balanced benchmark removes the Stage 21A cosine
+  concentration shortcut. Yet state+real pi05 did not stably improve over
+  state-only or shuffled action on either six-way or opposite-pair
+  discrimination. Stage 22's locked gate fails; sequence-aware adapter work
+  remains blocked. This is not a real-robot or sim-to-real result.
